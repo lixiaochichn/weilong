@@ -13,12 +13,14 @@ body {
 }
 
 .header {
+    box-sizing: border-box;
     width: 100vw;
     height: 80px;
     display: flex;
     background-color: #303030;
     justify-content: space-around; 
     align-items: center;
+    padding: 0 20px;
 }
 
 .logo {
@@ -36,7 +38,7 @@ body {
 }
 
 .contact {
-    margin: 0 10px;
+    margin-right: 20px;
     align-items: center;
     color: rgb(128, 128, 128);
     display: flex;
@@ -118,6 +120,9 @@ body {
     text-align: center;
     color: rgb(128, 128, 128);
 }
+.nav {
+    display: none;
+}
 
 @media only screen and (max-width: 700px) {
     #gift {
@@ -126,4 +131,38 @@ body {
     .main {
         flex-direction: column;
     }
+    .menu {
+        display: none;
+        width: 100vw;
+        flex-direction: column;
+        margin: 0;
+        text-align: center;
+    }
+    .contact {
+        display: none;
+        justify-content: space-around;
+    }
+    .item {
+        width: 100vw;
+        margin: 0;
+    }
+
+    .header {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+    }
+
+    .nav {
+    display: block;
+    font-size: 25px;
+    margin-right: 20px;
+    align-items: center;
+    color: rgb(128, 128, 128);
+    }
+
+    .nav:hover ~ div {
+        display: flex;
+    }
+
 }
