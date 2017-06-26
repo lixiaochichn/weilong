@@ -5,11 +5,17 @@
     margin: 0;
 }
 
+body {
+    overflow-x:hidden;
+}
+.latiao {
+    min-width: 320px;
+}
+
 .header {
     width: 100vw;
     height: 80px;
     display: flex;
-
     background-color: #303030;
     justify-content: space-around; 
     align-items: center;
@@ -26,7 +32,7 @@
 
 .fa.fa-github-alt,.fa.fa-qq,.fa.fa-weibo {
     font-size: 25px;
-    margin: 
+
 }
 
 .contact {
@@ -40,7 +46,6 @@
 
 .item {
     display: inline-block;
-    padding: 22px 0;
     font-size: 0;
 }
 
@@ -48,6 +53,10 @@
     font-size: 17px;
     color: rgb(128, 128, 128);
     text-decoration: none;
+    padding-bottom: 20px;
+}
+.item>a:hover {
+    border-bottom: 2px solid grey;
 }
 
 .menu {
@@ -95,11 +104,11 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex: 1;
 }
 
 #gift {
     height: 480px;
-    width: 500px;
     background-color: rgba(242, 242, 242, 1);
 }
 
@@ -108,4 +117,13 @@
     padding: 20px 0 30px;
     text-align: center;
     color: rgb(128, 128, 128);
+}
+
+@media only screen and (max-width: 700px) {
+    #gift {
+        order: -1;
+    }
+    .main {
+        flex-direction: column;
+    }
 }
