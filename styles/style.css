@@ -20,7 +20,7 @@ body {
     background-color: #303030;
     justify-content: space-around; 
     align-items: center;
-    padding: 0 20px;
+    z-index: 1;
 }
 
 .logo {
@@ -49,6 +49,7 @@ body {
 .item {
     display: inline-block;
     font-size: 0;
+    list-style: none;
 }
 
 .item>a {
@@ -78,11 +79,11 @@ body {
     padding: 30px;
     margin: 50px;
     border-radius: 5px;
-    transition: .2s;
+    transition: .2s;/*表示时间*/
 }
 .product:hover {
-    transform: translate3d(0, -2px, 0);
-    box-shadow: 0 17px 40px 0 rgba(0, 0, 0, .19);
+    /*transform: translate3d(0, -2px, 0);*/
+    box-shadow: 0 17px 40px 0 rgba(1, 0, 0, .19);
 }
 
 .productimg>a>img {
@@ -137,19 +138,35 @@ body {
         flex-direction: column;
         margin: 0;
         text-align: center;
+        flex-basis: 100%;
+        align-items: center;
     }
     .contact {
         display: none;
         justify-content: space-around;
+        background-color: #303030;
+        width: 100vw;
+        z-index: 1;
+        height: 60px;
+        margin-right: 0px;
+        flex-basis: 100%;
+        line-height: 60px;
     }
     .item {
-        width: 100vw;
+        display: block;
+        width: 100%;
         margin: 0;
+        height: 50px;
+        z-index: 1;
+        background-color: #303030;
+        flex-basis: 100%;
+        line-height: 50px;
     }
 
     .header {
         justify-content: space-between;
         flex-wrap: wrap;
+
         
     }
 
@@ -161,8 +178,13 @@ body {
     color: rgb(128, 128, 128);
     }
 
-    .nav:hover ~ div {
+    .nav:hover ~ ul {
         display: flex;
     }
+
+    .nav:hover {
+        margin-top: 22px;
+    }
+
 
 }
