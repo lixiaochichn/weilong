@@ -83,6 +83,7 @@ body {
 }
 .product:hover {
     /*transform: translate3d(0, -2px, 0);*/
+    transform: translate(0, -2px);
     box-shadow: 0 17px 40px 0 rgba(1, 0, 0, .19);
 }
 
